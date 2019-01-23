@@ -5,7 +5,7 @@ const Twitter = new twit(config);
 
 const retweet = () => {
   const params = {
-    q: '#nodejs, #Nodejs, #javascript, #JavaScript, #Javascript, #React, #reactjs, #coding',
+    q: '#nodejs, #Nodejs, #javascript, #JavaScript, #Javascript, #React, #reactjs, #coding, #programming, #49ers, #Mavs, #MFFL',
     result_type: "recent",
     lang: 'en'
   };
@@ -31,11 +31,10 @@ const retweet = () => {
 } 
 
 const favTweet = () => {
-  const params = {
-    q: '#nodejs, #Nodejs, #javascript, #JavaScript, #Javascript, #React, #reactjs, #coding',
-    result_type: "recent, popular",
-    lang: 'en'
-  };
+  const params = { 
+    q: "#nodejs, #Nodejs, #javascript, #JavaScript, #Javascript, #React, #reactjs, #coding, #programming, #49ers, #Mavs, #MFFL", 
+    result_type: "recent, popular", 
+    lang: "en" };
 
   Twitter.get('search/tweets', params, (err, data) => {
     let tweet = data.statuses;
